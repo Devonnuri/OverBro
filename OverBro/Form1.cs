@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,7 +32,12 @@ namespace OverBro
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            string url = "https://owapi.net/api/v3/u/DEVONNURI-1251/stats";
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
+            req.UserAgent = "Mozilla/5.0";
+            Stream resStream = req.GetResponse().GetResponseStream();
+            StreamReader reader = new StreamReader(resStream);
+            MessageBox.Show(reader.ReadToEnd());
         }
     }
 }
