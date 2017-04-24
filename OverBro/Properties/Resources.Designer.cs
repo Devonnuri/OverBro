@@ -61,11 +61,31 @@ namespace OverBro.Properties {
         }
         
         /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_noShadow {
+            get {
+                object obj = ResourceManager.GetObject("Icon_noShadow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   System.Byte[] 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
         internal static byte[] ow_font {
             get {
                 object obj = ResourceManager.GetObject("ow_font", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Byte[] 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static byte[] yoonblackfit {
+            get {
+                object obj = ResourceManager.GetObject("yoonblackfit", resourceCulture);
                 return ((byte[])(obj));
             }
         }
